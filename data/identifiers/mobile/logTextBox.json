@@ -1,0 +1,7 @@
+{
+  "android": {
+    "addButton": "~Add",
+    "logTextArea": "id=io.appium.android.apis:id/text",
+    "doNothingButton": "~Do nothing"
+  }
+}

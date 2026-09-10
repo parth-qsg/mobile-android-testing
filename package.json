@@ -1,0 +1,19 @@
+{
+  "name": "android-mobile-tests",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "wdio run wdio.conf.ts"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^9",
+    "@wdio/mocha-framework": "^9",
+    "@wdio/local-runner": "^9",
+    "@wdio/spec-reporter": "^9",
+    "@wdio/globals": "^9",
+    "webdriverio": "^9.29.0",
+    "appium": "^3.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
