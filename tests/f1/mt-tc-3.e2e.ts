@@ -7,7 +7,7 @@ describe('LogTextBox', () => {
   const textMenuPage = new TextMenuPage();
   const logTextBoxPage = new LogTextBoxPage();
 
-  it('@new @f1 @regression should append additional log entries when ADD is clicked multiple times', async () => {
+  it('@new @f1 @regression should append additional log entries to the LogTextBox when ADD is clicked multiple times', async () => {
     // Arrange
     await homePage.assertHomeDisplayed();
 
@@ -25,12 +25,12 @@ describe('LogTextBox', () => {
     await logTextBoxPage.clickAdd();
 
     // Assert
-    await logTextBoxPage.assertLogContainsText('This is a test');
+    await logTextBoxPage.assertLogContainsText('this is a test');
 
     // Act
     await logTextBoxPage.clickAdd();
 
     // Assert
-    await logTextBoxPage.assertLogHasAtLeastOccurrences({ expectedText: 'This is a test', minOccurrences: 2 });
+    await logTextBoxPage.assertLogHasAtLeastOccurrences({ expectedText: 'this is a test', minOccurrences: 2 });
   });
 });

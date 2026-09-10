@@ -33,7 +33,12 @@ export class LogTextBoxPage extends BasePage {
 
   async assertLogHasAtLeastOccurrences(params: { expectedText: string; minOccurrences: number }): Promise<void> {
     const text = await this.getElementText(this.logTextArea);
-    const occurrences = text.split(params.expectedText).length - 1;
+
+    // Count occurrences case-insensitively and safely (avoid split() mismatch when casing differs).
+    const escaped = params.expectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const matches = text.match(new RegExp(escaped, 'gi'));
+    const occurrences = matches ? matches.length : 0;
+
     await expect(occurrences).toBeGreaterThanOrEqual(params.minOccurrences);
   }
 }
