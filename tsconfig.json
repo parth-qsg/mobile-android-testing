@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["es2022", "dom"],
+    "types": [
+      "node",
+      "@wdio/globals/types",
+      "@wdio/cucumber-framework",
+      "@wdio/appium-service"
+    ],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./.tsbuild",
+    "rootDir": "./"
+  },
+  "include": ["wdio.conf.ts", "tagFilter.ts", "src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
