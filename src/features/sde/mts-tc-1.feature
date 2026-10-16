@@ -1,6 +1,7 @@
-@regression @sde @MTS-TC-1
+@mobile @regression @sde @MTS-TC-1
 Feature: LogTextBox Message Display
 
+  @mobile @regression @sde @MTS-TC-1
   Scenario: Clicking ADD button displays the expected message on LogTextBox screen
     Given the user is logged into the application
     And the user can see the Text menu in the navigation
