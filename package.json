@@ -1,0 +1,25 @@
+{
+  "name": "wdio-appium-cucumber-ts",
+  "scripts": {
+    "wdio:test:smoke": "dotenv -e qa.env -- cross-env ENVIRONMENT=qa TAGS=@smoke wdio wdio.conf.ts",
+    "wdio:test:byTag": "dotenv -e qa.env -- cross-env ENVIRONMENT=qa wdio wdio.conf.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@wdio/appium-service": "^9",
+    "@wdio/cli": "^9",
+    "@wdio/cucumber-framework": "^9",
+    "@wdio/globals": "^9",
+    "@wdio/local-runner": "^9",
+    "@wdio/spec-reporter": "^9",
+    "appium": "^3.5.2",
+    "appium-uiautomator2-driver": "^8.5.0",
+    "cross-env": "^10.1.0",
+    "cucumber-tag-expressions": "^2.0.3",
+    "dotenv": "^17.4.2",
+    "dotenv-cli": "^11.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.0"
+  }
+}
